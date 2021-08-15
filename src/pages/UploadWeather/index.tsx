@@ -51,7 +51,7 @@ const UploadWeather = () => {
                 .get('https://api.openweathermap.org/data/2.5/find?', { params })
                 .then(async (res) => {
                     if (res.status !== 200) {
-                        console.log('날씨 정보를 받아오지 못했습니다');
+                        console.log('날씨 정보 받아오지 못했습니다');
                         return;
                     }
                     //
