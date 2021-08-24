@@ -14,8 +14,8 @@ export const Title = styled.Text`
     margin-bottom: 16px;
 `;
 export const WeatherIcon = styled.Image`
-    width: 17px;
-    height: 13px;
+    width: 24px;
+    height: 24px;
 `;
 export const PrecipitationPercent = styled.Text`
     font-family: Roboto500;

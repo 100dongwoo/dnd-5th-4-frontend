@@ -98,7 +98,7 @@ const Login = () => {
         <Container>
             <TopContainer>
                 <LogoImage source={require('Images/Logo.png')} />
-                <Image source={require('Images/LogoText.png')} />
+                <Image source={require('Images/LogoText.png')} style={{ width: 110, height: 18 }} />
             </TopContainer>
             <BottomContainer>
                 <TouchableOpacity>

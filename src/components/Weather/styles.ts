@@ -21,7 +21,7 @@ export const BoxContainer = styled.View`
 `;
 export const WeatherImage = styled.Image`
     width: 24px;
-    height: 16px;
+    height: 24px;
     margin-right: 8px;
 `;
 export const Description = styled.Text`

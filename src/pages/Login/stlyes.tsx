@@ -12,6 +12,8 @@ export const TopContainer = styled.View`
 `;
 export const LogoImage = styled.Image`
     margin-bottom: 18px;
+    width: 59px;
+    height: 54px;
 `;
 export const BottomContainer = styled.View`
     padding-horizontal: 20px;

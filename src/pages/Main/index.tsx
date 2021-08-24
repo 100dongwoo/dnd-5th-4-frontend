@@ -48,7 +48,7 @@ const Main = () => {
     }, [locationState]);
     useEffect(() => {
         KakaoLocation(lat, lon); // 지역명
-        WeatherSearch(lat, lon); //시간대별, 주간날씨
+        WeatherSearch(lat, lon); //v, 주간날씨
         CurrentWeatherSearch(lat, lon); // 현재날씨
         airPollutionSearch(lat, lon); //미세먼지
         fetchPost(); //나의 게시글
