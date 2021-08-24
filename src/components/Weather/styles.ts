@@ -13,7 +13,6 @@ export const TopContainer = styled.View<{ weatherMoreShow?: boolean }>`
     border-width: ${(props) => (props.weatherMoreShow ? '0px' : '1px')};
     border-color: rgba(173, 178, 217, 0.25);
     border-radius: 4px;
-    elevation: ${(props) => (props.weatherMoreShow ? 0 : 1)};
 `;
 export const BoxContainer = styled.View`
     flex-direction: row;

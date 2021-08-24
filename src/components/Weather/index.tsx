@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import {
     BoxContainer,
@@ -46,54 +46,57 @@ const Weather: React.FC<WeatherProps> = ({
         else return '#48CFFA';
     };
     return (
-        <Container>
-            <TopContainer weatherMoreShow={weatherMoreShow}>
-                <BoxContainer>
-                    <Temperature>{parseInt(currentWeather?.main.temp)}°</Temperature>
-                    <WeatherImage source={WeatherImages[currentWeather?.weather[0].icon]} resizeMode={'contain'} />
-                    {/*<Description>{currentWeather?.weather[0].description}</Description>*/}
-                    <Description>{WeatherDescription[currentWeather?.weather[0].icon]}</Description>
-                </BoxContainer>
-                <BoxContainer>
-                    <MaxTemperature>{parseInt(dailyWeather[0].temp.max)}°</MaxTemperature>
-                    <Division>/</Division>
-                    <MinTemperature>{parseInt(dailyWeather[0].temp.min)}°</MinTemperature>
-                    <Entypo
-                        name="chevron-up"
-                        size={20}
-                        color="#828282"
-                        style={{
-                            transform: [{ rotate: weatherMoreShow ? '0deg' : '180deg' }],
-                        }}
-                        onPress={(e) => {
-                            setWeatherMoreShow(!weatherMoreShow);
-                        }}
-                    />
-                </BoxContainer>
-            </TopContainer>
-            {weatherMoreShow && (
-                <DetailWeatherContainer>
-                    <Box>
-                        <Title>습도</Title>
-                        <Information>{currentWeather?.main.humidity}%</Information>
-                    </Box>
-                    <Box>
-                        <Title>강수량</Title>
-                        <Information>{rainfall.toFixed(1)}mm</Information>
-                    </Box>
-                    <Box>
-                        <Title>미세</Title>
-                        <Information color={'#4068B0'} type={'Pretendard400'}>
-                            {airPollutionArray[airPollution - 1]}
-                        </Information>
-                    </Box>
-                    <Box>
-                        <Title>체감온도</Title>
-                        <Information color={'#FF4743'}>{parseInt(currentWeather?.main.feels_like)}°</Information>
-                    </Box>
-                </DetailWeatherContainer>
-            )}
-        </Container>
+        <TouchableWithoutFeedback
+            onPress={(e) => {
+                setWeatherMoreShow(!weatherMoreShow);
+            }}
+        >
+            <Container>
+                <TopContainer weatherMoreShow={weatherMoreShow}>
+                    <BoxContainer>
+                        <Temperature>{parseInt(currentWeather?.main.temp)}°</Temperature>
+                        <WeatherImage source={WeatherImages[currentWeather?.weather[0].icon]} resizeMode={'contain'} />
+                        {/*<Description>{currentWeather?.weather[0].description}</Description>*/}
+                        <Description>{WeatherDescription[currentWeather?.weather[0].icon]}</Description>
+                    </BoxContainer>
+                    <BoxContainer>
+                        <MaxTemperature>{parseInt(dailyWeather[0].temp.max)}°</MaxTemperature>
+                        <Division>/</Division>
+                        <MinTemperature>{parseInt(dailyWeather[0].temp.min)}°</MinTemperature>
+                        <Entypo
+                            name="chevron-up"
+                            size={20}
+                            color="#828282"
+                            style={{
+                                transform: [{ rotate: weatherMoreShow ? '0deg' : '180deg' }],
+                            }}
+                        />
+                    </BoxContainer>
+                </TopContainer>
+                {weatherMoreShow && (
+                    <DetailWeatherContainer>
+                        <Box>
+                            <Title>습도</Title>
+                            <Information>{currentWeather?.main.humidity}%</Information>
+                        </Box>
+                        <Box>
+                            <Title>강수량</Title>
+                            <Information>{rainfall.toFixed(1)}mm</Information>
+                        </Box>
+                        <Box>
+                            <Title>미세</Title>
+                            <Information color={'#4068B0'} type={'Pretendard400'}>
+                                {airPollutionArray[airPollution - 1]}
+                            </Information>
+                        </Box>
+                        <Box>
+                            <Title>체감온도</Title>
+                            <Information color={'#FF4743'}>{parseInt(currentWeather?.main.feels_like)}°</Information>
+                        </Box>
+                    </DetailWeatherContainer>
+                )}
+            </Container>
+        </TouchableWithoutFeedback>
     );
 };
 

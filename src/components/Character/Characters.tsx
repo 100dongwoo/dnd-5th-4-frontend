@@ -54,7 +54,7 @@ const Characters: React.FC<CharacterProps> = ({ currentWeather }) => {
                         var { width } = event.nativeEvent.layout;
                         setImageWidth(width);
                     }}
-                    style={{ marginLeft: -imageWidth / 2 }}
+                    style={{ marginLeft: -imageWidth / 2, width: 155, height: 31 }}
                 />
             </Animated.View>
         </Container>
