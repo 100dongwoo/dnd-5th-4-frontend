@@ -14,7 +14,12 @@ const MainEmoji: React.FC<RegisterLayoutProps> = ({ left, bottom, mood, index, p
     const [isOpenAddModal, setIsOpenAddModal] = useState(false);
     const position = new Animated.ValueXY({ x: 0, y: 0 });
     const pan = PanResponder.create({
-        onMoveShouldSetPanResponder: () => true,
+        onMoveShouldSetPanResponder: (evt, { dx, dy }) => {
+            if (dx > 3 || dy > 3) {
+                return true;
+            }
+            return false;
+        },
         onPanResponderMove: Animated.event([null, { dx: position.x, dy: position.y }], { useNativeDriver: false }),
         onPanResponderRelease: () => {
             Animated.spring(position, {
@@ -22,7 +27,13 @@ const MainEmoji: React.FC<RegisterLayoutProps> = ({ left, bottom, mood, index, p
                 useNativeDriver: false,
             }).start();
         },
+        // onPanResponderGrant: (e, gestureState) => {
+        //     setTimeout(() => {
+        //         setIsOpenAddModal(true);
+        //     }, 2000);
+        // },
     });
+
     const rotate = position.x.interpolate({
         inputRange: [0, 100],
         outputRange: ['0deg', '360deg'],
@@ -41,9 +52,9 @@ const MainEmoji: React.FC<RegisterLayoutProps> = ({ left, bottom, mood, index, p
         >
             <MainPageModal isOpenAddModal={isOpenAddModal} setIsOpenAddModal={setIsOpenAddModal} post={post} />
             <TouchableOpacity
-                onPress={() => {
-                    setIsOpenAddModal(true);
-                }}
+                delayLongPress={1000}
+                onLongPress={() => setIsOpenAddModal(true)}
+                onPressOut={() => setIsOpenAddModal(false)}
             >
                 <Image
                     source={MoodImage[mood]}
