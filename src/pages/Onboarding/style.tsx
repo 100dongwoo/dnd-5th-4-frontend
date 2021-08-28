@@ -12,13 +12,6 @@ export const TopContainer = styled.View`
     padding-horizontal: 5px;
 `;
 
-export const TitleContainer = styled.View`
-    height: 117px;
-    /* background-color: #bdbdbd; */
-    flex-direction: row;
-    justify-content: space-between;
-`;
-
 export const TitleWraper = styled.Text`
     font-family: PretendardBold;
     font-size: 20px;
@@ -37,21 +30,6 @@ export const TitleText = styled.Text<{ color?: any }>`
     text-align: center;
     letter-spacing: -0.3px;
     color: #000000;
-`;
-export const StepBar = styled.Image`
-    height: 8px;
-    width: 48px;
-    align-self: center;
-    margin-bottom: 44px;
-    margin-top: 32px;
-`;
-
-const ButtonWrap = styled.TouchableOpacity<{ color?: boolean }>`
-    align-items: center;
-    background: ${(props) => (props.color ? '#CACCD6' : '#000000')};
-    height: 44px;
-    justify-content: center;
-    border-radius: 4px;
 `;
 
 export const SubTitleWraper = styled.Text`
@@ -79,4 +57,18 @@ export const Contents = styled.View`
 `;
 export const BottomContainer = styled.TouchableHighlight`
     margin-top: 20px;
+`;
+export const BigImage = styled.Image`
+    width: 123px;
+    height: 155px;
+`;
+export const Sun = styled.Image`
+    width: 156px;
+    height: 156px;
+    flex: 1;
+    align-self: flex-start;
+    margin-left: -38px;
+`;
+export const BigCalendar = styled.Image`
+    width: 100%;
 `;

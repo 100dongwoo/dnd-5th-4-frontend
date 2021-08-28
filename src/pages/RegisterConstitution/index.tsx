@@ -62,7 +62,7 @@ const RegisterConstitution: React.FC<UserProps> = ({ route }) => {
                     type: 'LOGIN',
                     payload: params,
                 });
-                navigation.navigate('FirstAppGuide');
+                navigation.navigate('Onboarding');
             })
             .catch((err) => {
                 console.log('err', err);
