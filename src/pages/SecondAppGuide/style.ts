@@ -4,7 +4,6 @@ export const TopContainer = styled.View`
     flex: 1;
     justify-content: center;
     align-items: center;
-    padding-horizontal: 5px;
     margin-bottom: 20px;
 `;
 export const BigImage = styled.Image`
@@ -16,5 +15,5 @@ export const Sun = styled.Image`
     height: 156px;
     flex: 1;
     align-self: flex-start;
-    margin-left: -40px;
+    margin-left: -20px;
 `;

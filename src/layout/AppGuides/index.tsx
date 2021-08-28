@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Image, Text, View } from 'react-native';
+import { Dimensions, Image, Text, View } from 'react-native';
 import { StepBar, SubTitleText, SubTitleWraper, TitleText, TitleWraper, Container, TopContainer } from './styles';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../styles/theme';
@@ -20,6 +20,7 @@ const Title: React.FC = ({ children }) => {
 const SubTitle: React.FC = ({ children }) => {
     return <SubTitleWraper>{children}</SubTitleWraper>;
 };
+const { width, height } = Dimensions.get('window');
 const AppGuidesLayout = ({
     children,
     titleContents,
@@ -29,7 +30,7 @@ const AppGuidesLayout = ({
     TopcontainerFunction,
 }: AppGuidesLayoutProps) => {
     return (
-        <Container>
+        <Container style={{ width: width }}>
             <ThemeProvider theme={theme}>
                 {TopcontainerFunction()}
                 <View style={{ marginTop: 37 }}>
@@ -40,9 +41,9 @@ const AppGuidesLayout = ({
                         <SubTitleText>{subTitleContents}</SubTitleText>
                     </SubTitle>
                     <StepBar source={StempArray[Images]} resizeMode={'contain'} />
-                    <Button onPress={PushNextPage} color={false} disabled={false}>
-                        시작하기
-                    </Button>
+                    {/*<Button onPress={PushNextPage} color={false} disabled={false}>*/}
+                    {/*    시작하기*/}
+                    {/*</Button>*/}
                 </View>
             </ThemeProvider>
         </Container>

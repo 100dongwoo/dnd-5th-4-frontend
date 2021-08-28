@@ -6128,6 +6128,11 @@ react-native-month-selector@1.4.0:
     prop-types "^15.6.0"
     react-native-swipe-gestures "^1.0.3"
 
+react-native-onboarding-animate@1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/react-native-onboarding-animate/-/react-native-onboarding-animate-1.2.4.tgz#4874231abc585aeb1d4a0433e488ad9301338f63"
+  integrity sha512-Qqdw5rVi8UBnDoUIB+TVKxZXdUuFA+Tt2KF/jgjD/k7qNZezlCFeYYu4dBtVDscVEDPip3gXo7iRs9QkpOUS9Q==
+
 react-native-reanimated@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-2.2.0.tgz#a6412c56b4e591d1f00fac949f62d0c72c357c78"

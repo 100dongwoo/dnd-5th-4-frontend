@@ -18,7 +18,8 @@ import AlertSettingPage from 'pages/AlertSettingPage';
 import FirstAppGuide from '../pages/FirstAppGuide';
 import SecondAppGuide from '../pages/SecondAppGuide';
 import ThirdAppGuide from '../pages/ThirdAppGuide';
-
+import NaverLogin from '../pages/NaverLogin';
+import Onboarding from '../pages/Onboarding';
 const Stack = createNativeStackNavigator();
 
 const MyStack = () => {
@@ -27,8 +28,9 @@ const MyStack = () => {
             screenOptions={({ route, navigation }) => ({
                 headerShown: false,
             })}
-            initialRouteName="Login"
+            initialRouteName="Onboarding"
         >
+            <Stack.Screen name={'Onboarding'} component={Onboarding} />
             <Stack.Screen name={'ThirdAppGuide'} component={ThirdAppGuide} />
             <Stack.Screen name={'SecondAppGuide'} component={SecondAppGuide} />
             <Stack.Screen name="FirstAppGuide" component={FirstAppGuide} />

@@ -14,7 +14,7 @@ const SecondAppGuide = () => {
     const TopcontainerFunction = () => {
         return (
             <TopContainer style={{}}>
-                <Sun source={require('Images/BigSun.png')} resizeMode={'contain'} />
+                <Sun source={require('Images/CutSun.png')} resizeMode={'contain'} />
                 <View
                     style={{
                         width: '100%',
