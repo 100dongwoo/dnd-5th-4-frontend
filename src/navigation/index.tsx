@@ -18,7 +18,6 @@ import AlertSettingPage from 'pages/AlertSettingPage';
 import FirstAppGuide from '../pages/FirstAppGuide';
 import SecondAppGuide from '../pages/SecondAppGuide';
 import ThirdAppGuide from '../pages/ThirdAppGuide';
-import NaverLogin from '../pages/NaverLogin';
 import Onboarding from '../pages/Onboarding';
 const Stack = createNativeStackNavigator();
 

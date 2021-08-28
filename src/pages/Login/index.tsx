@@ -98,7 +98,7 @@ const Login = () => {
         <Container>
             <TopContainer>
                 <LogoImage source={require('Images/Logo.png')} />
-                <Image source={require('Images/LogoText.png')} />
+                <Image source={require('Images/LogoText.png')} style={{ width: 110, height: 18 }} />
             </TopContainer>
             <BottomContainer>
                 <TouchableOpacity>
@@ -112,7 +112,7 @@ const Login = () => {
                         <SocialText>카카오 로그인</SocialText>
                     </SocialBox>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('NaverLogin')}>
                     <SocialBox background="#06BE34">
                         <SocialImage
                             source={require('Images/NaverLogo.png')}
