@@ -200,7 +200,7 @@ const Main = () => {
                         let { height } = event.nativeEvent.layout;
                         setScrollHeight(height);
                     }}
-                    style={{ marginTop: 10 }}
+                    style={{ marginTop: 10, marginLeft: -18, marginRight: -18 }}
                     showsHorizontalScrollIndicator={false}
                     bounces={false}
                     showsVerticalScrollIndicator={false}

@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-    margin-top: 20px;
     flex: 1;
     padding-bottom: 10px;
+    margin: 20px 18px 0px;
 `;
 export const Nav = styled.View`
     flex-direction: row;
